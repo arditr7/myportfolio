@@ -1,0 +1,241 @@
+#experience-section{
+    width: 100%;
+    height: auto;
+    /* background-color: #12151A; */
+    background-color: transparent;
+}
+.experience-wrapper{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.experience-container{
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-header{
+    font-family: montserrat-alternates, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: #ABB8C3;
+    display: flex;
+}
+
+.experience-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.experience-bio{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-header{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bio-p{
+    width: 80%;
+    margin: 1.2rem auto auto auto;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: justify;
+    color: aliceblue;
+}
+
+.experience-bio h3{
+    color: #ABB8C3;
+}
+
+.experience-bio h4{
+    color: #ABB8C3;
+    margin: 1.5rem 0 0 0;
+}
+
+.work-date{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hr-row-work-date{
+    width: 100%;
+    height: 1px;
+    /* background: rgb(213,161,73);
+    background: linear-gradient(90deg, rgba(213, 162, 73, 0) 1%, rgba(213,161,73,1) 25%, rgba(213,161,73,1) 79%, rgba(213, 162, 73, 0) 100%); */
+    border: 2px solid;
+    border-image: radial-gradient(closest-side, transparent, #D5A149,transparent) 1;
+    /* margin-top: 2.5rem; */
+}
+
+.experience-responsibilities{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.experience-responsibilities h3{
+    width: 40%;
+    color: #ABB8C3;
+    margin: 1.5rem 0 0 0;
+}
+
+.responsibilities-header{
+width: 40%;
+height: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.hr-row-experience{
+    width: 100%;
+    height: 1px;
+    border: 2px solid;
+    border-image: radial-gradient(closest-side, transparent, #D5A149,transparent) 1;
+    margin-bottom: 2rem;
+}
+
+.responsibilities-content{
+    width: 85%;
+    height: auto;
+    margin: auto;
+}
+
+.responsibilities-box{
+    display: flex;
+    width: 100%;
+}
+
+.responsibilities-box p {
+    width: 95%;
+    margin-top: 0;
+    color: aliceblue;
+    text-align: justify;
+}
+.responsibilities-hr{
+    height: 2px;
+    width: 3%;
+    background: rgb(213,161,73);
+    /* background: linear-gradient(90deg, rgba(213, 162, 73, 0) 1%, rgba(213,161,73,1) 25%, rgba(213,161,73,1) 79%, rgba(213, 162, 73, 0) 100%); */
+    border: none;    
+    margin-right: 0.4rem;
+}
+
+
+@media screen and (max-width: 1300px) and (min-width: 1050px) {
+
+}
+
+@media screen and (max-width: 892px) and (min-width: 821px) {
+    .work-date{
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 820px) and (min-width: 481px) {
+    .experience-header{
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .work-date{
+        width: 40%;
+    }
+
+    .bio-p {
+        width: 100%;
+    }
+
+    .experience-responsibilities h3 {
+        width: 100%;
+    }
+
+    .responsibilities-content {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 680px) and (min-width: 481px){
+    .bio-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-date{
+        width: 80%;
+    }
+
+    .experience-bio h4{
+        margin:0.5rem 0 0 0;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    .experience-header{
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* .work-date{
+        width: 40%;
+    } */
+
+    .experience-container{
+        width: 90%;
+    }
+
+    .experience-content{
+        width: 100%;
+    }
+
+    .bio-p {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .responsibilities-header {
+        width: 100%;
+    }
+
+    .experience-responsibilities h3 {
+        width: 100%;
+    }
+
+    .responsibilities-content {
+        width: 100%;
+    }
+    .bio-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-date{
+        width: 80%;
+    }
+
+    .experience-bio h4{
+        margin:0.5rem 0 0 0;
+    }
+}

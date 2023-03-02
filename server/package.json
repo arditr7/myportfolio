@@ -8,7 +8,7 @@
     "server": "nodemon index.js",
     "client": "npm start --prefix ./client",
     "dev": "nodemon index.js",
-    "build": "npm run build"
+    "build": "npm i"
   },
   "author": "",
   "license": "ISC",

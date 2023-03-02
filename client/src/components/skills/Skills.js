@@ -1,7 +1,5 @@
 import React from "react";
 import "./Skills.css";
-import Skills8 from "../../assets/8.png";
-import Skills7 from "../../assets/7.png";
 
 const Skills = () => {
   return (

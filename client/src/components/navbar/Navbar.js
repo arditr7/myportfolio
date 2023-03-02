@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import {
-  AiOutlineInstagram as Insta,
-  AiOutlineTwitter as Twitter,
-} from "react-icons/ai";
-import { FaDiscord as Discord } from "react-icons/fa";
 import Logo from "../../assets/arditLogo.png";
 // import pdf from '../../assets/Whitepaper.pdf';
 import { BsLinkedin } from "react-icons/bs";
@@ -48,19 +43,29 @@ function Navbar() {
       </label>
       <ul id="ul-nav">
         <li>
-          <a href="#"  onClick={changer}>Home</a>
+          <a href="#" onClick={changer}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#services-section"  onClick={changer}>Services</a>
+          <a href="#services-section" onClick={changer}>
+            Services
+          </a>
         </li>
         <li>
-          <a href="#experience-section"  onClick={changer}>Experience</a>
+          <a href="#experience-section" onClick={changer}>
+            Experience
+          </a>
         </li>
         <li>
-          <a href="#skills-section"  onClick={changer}>Skills</a>
+          <a href="#skills-section" onClick={changer}>
+            Skills
+          </a>
         </li>
         <li>
-          <a href="#contact-section" onClick={changer}>Contact</a>
+          <a href="#contact-section" onClick={changer}>
+            Contact
+          </a>
         </li>
         <span className="row-responsive">
           {/* <li>

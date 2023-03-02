@@ -1,13 +1,11 @@
 import React, { useCallback } from "react";
-// import ProfileImg from "../../assets/profile1.png";
 import ProfileImg from "../../assets/programming.svg";
 import "./Header.css";
-import CV from "../../assets/CV-ArditRamadani.pdf";
+import CV from "../../assets/cv.pdfs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import ParticleBackground from "../particles";
 
 const Header = () => {
   AOS.init({

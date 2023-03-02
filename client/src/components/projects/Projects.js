@@ -1,8 +1,5 @@
 import React from "react";
 import "./Projects.css";
-import Solidity from "../../assets/solidity.png";
-// import Web from "../../assets/web.png"
-import project1Img from "../../assets/project1copy.png";
 
 const Projects = () => {
   return (

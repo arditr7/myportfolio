@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import ProfileImg from "../../assets/programming.svg";
 import "./Header.css";
-import CV from "../../assets/cv.pdfs";
+import CV from "../../assets/cv.pdf";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Particles from "react-tsparticles";

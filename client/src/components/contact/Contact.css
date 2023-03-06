@@ -67,6 +67,8 @@ textarea{
     border-radius: 15px;
     background-color: #292D30;
     border: none; 
+    color: #ffffff;
+
 }
 
 textarea:active{

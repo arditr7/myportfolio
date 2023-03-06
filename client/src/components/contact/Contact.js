@@ -1,132 +1,76 @@
-import React, { Component } from "react";
+import React, { useRef } from "react";
 import "./Contact.css";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 
-class Contact extends Component {
-  state = {
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    sent: false,
-  };
+const Contact = () => {
+  const form = useRef();
 
-  handleName = (e) => {
-    this.setState({
-      name: e.target.value,
-    });
-  };
-
-  handleEmail = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
-  };
-
-  handlePhone = (e) => {
-    this.setState({
-      phone: e.target.value,
-    });
-  };
-
-  handleMessage = (e) => {
-    this.setState({
-      message: e.target.value,
-    });
-  };
-
-  formSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      phone: this.state.phone,
-      message: this.state.message,
-    };
-    axios
-      .post("/api/forma", data)
-      .then((res) => {
-        this.setState(
-          {
-            sent: true,
-          },
-          this.resetForm()
-        );
-      })
-      .catch(() => {
-        console.log("message not sent");
-      });
+    emailjs
+      .sendForm(
+        "service_myportfolio",
+        "template_myportfolio",
+        form.current,
+        "0IxelkMGDl07yxXQw"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
-
-  resetForm = () => {
-    this.setState({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-    setTimeout(() => {
-      this.setState({
-        sent: false,
-      });
-    }, 3000);
-  };
-
-  render() {
-    return (
-      <div id="contact-section">
-        <div className="contact-wrapper">
-          <div className="contact-container">
-            <div className="contact-header" data-aos="fade-down">
-              <h1 data-aos="zoom-in">CONTACT</h1>
-            </div>
-            <div className="contact-content">
-              <form onSubmit={this.formSubmit}>
-                <input
-                  type="text"
-                  placeholder="  Name"
-                  id="name"
-                  data-aos="zoom-in"
-                  value={this.state.name}
-                  onChange={this.handleName}
-                />
-                <input
-                  type="email"
-                  placeholder="  Email"
-                  id="email"
-                  data-aos="zoom-in"
-                  value={this.state.email}
-                  onChange={this.handleEmail}
-                />
-                <input
-                  type="tel"
-                  placeholder="  Phone"
-                  id="name"
-                  data-aos="zoom-in"
-                  value={this.state.phone}
-                  onChange={this.handlePhone}
-                />
-                <textarea
-                  placeholder="  Message"
-                  id="name"
-                  data-aos="zoom-in"
-                  value={this.state.message}
-                  onChange={this.handleMessage}
-                />
-                <button className="contact-button" type="submit">
-                  SUBMIT
-                </button>{" "}
-              </form>
-              <div className={this.state.sent ? "msg msgAppear" : "msg"}>
-                Message has been sent!
-              </div>
-            </div>
+  return (
+    <div id="contact-section">
+      <div className="contact-wrapper">
+        <div className="contact-container">
+          <div className="contact-header" data-aos="fade-down">
+            <h1 data-aos="zoom-in">CONTACT</h1>
+          </div>
+          <div className="contact-content">
+            <form ref={form} onSubmit={sendEmail}>
+              <input
+                type="text"
+                placeholder="  Name"
+                id="name"
+                name="user_name"
+                data-aos="zoom-in"
+              />
+              <input
+                type="email"
+                placeholder="  Email"
+                id="email"
+                name="user_name"
+                data-aos="zoom-in"
+              />
+              <input
+                type="tel"
+                placeholder="  Phone"
+                id="name"
+                name="user_phone"
+                data-aos="zoom-in"
+              />
+              <textarea
+                placeholder="  Message"
+                id="name"
+                data-aos="zoom-in"
+                name="message"
+              />
+              {/* <button className="contact-button" type="submit">
+                SUBMIT
+              </button>{" "} */}
+              <input type="submit" value="Send" className="contact-button" />
+            </form>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Contact;

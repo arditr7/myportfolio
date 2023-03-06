@@ -45,7 +45,7 @@ const Contact = () => {
                 type="email"
                 placeholder="  Email"
                 id="email"
-                name="user_name"
+                name="user_email"
                 data-aos="zoom-in"
               />
               <input

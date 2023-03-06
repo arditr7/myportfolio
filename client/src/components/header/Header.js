@@ -114,12 +114,13 @@ const Header = () => {
             detectRetina: true,
           }}
         />
-        <div className="header-upper" data-aos="fade-down">
+        <div className="header-upper">
           <img
             src={ProfileImg}
             alt="Profile Picture"
             className="header-img"
-            data-aos="fade-in"
+            data-aos="fade-down"
+            data-aos-duration="1500"
           />
           <hr className="hr-row"></hr>
         </div>
